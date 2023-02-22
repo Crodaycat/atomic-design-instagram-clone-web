@@ -2,10 +2,10 @@
   font-weight: bold;
 
   &--basic {
-    color: rgb(38, 38, 38);
+    color: var(--shadows-A200);
   }
 
   &--primary {
-    color: rgb(0, 149, 246);
+    color: var(--primary-A400);
   }
 }

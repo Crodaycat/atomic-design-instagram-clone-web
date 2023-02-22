@@ -5,10 +5,10 @@
   white-space: nowrap;
 
   &--basic {
-    color: rgb(142, 142, 142);
+    color: var(--shadows-A500);
   }
 
   &--primary {
-    color: rgb(0, 149, 246);
+    color: var(--primary-A400);
   }
 }

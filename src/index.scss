@@ -1,7 +1,15 @@
 :root {
-  
+  // shadows
+  --shadows-A200: rgb(38, 38, 38);
+  --shadows-A500: rgb(142, 142, 142);
+  --shadows-A600: rgb(147, 147, 147);
+  // primary
+  --primary-A200: rgb(0, 55, 107);
+  --primary-A400: rgb(0, 149, 246);
+  // secondary
+  // accent
+  // warn
 }
-
 
 body {
   margin: 0;
