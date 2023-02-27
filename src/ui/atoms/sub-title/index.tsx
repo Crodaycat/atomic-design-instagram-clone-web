@@ -14,11 +14,11 @@ export const SubTitle: FC<SubTitleProps> = ({
   size = 12,
 }) => {
   return (
-    <sub
+    <span
       className={`app-sub-title app-sub-title--${color}`}
       style={{ fontSize: `${size}px` }}
     >
       {children}
-    </sub>
+    </span>
   );
 };
