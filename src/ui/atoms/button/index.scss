@@ -1,0 +1,23 @@
+.app-button {
+  all: unset;
+  cursor: pointer;
+  outline: 1px;
+  font-weight: bold;
+  font-size: 12px;
+
+  &--basic {
+    color: var(--shadows-A200);
+
+    &:hover {
+      color: var(--shadows-A500);
+    }
+  }
+
+  &--primary {
+    color: var(--primary-A400);
+
+    &:hover {
+      color: var(--primary-A200);
+    }
+  }
+}
