@@ -1,0 +1,21 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+
+  &--basic {
+    color: var(--shadows-A200);
+
+    &:hover {
+      color: var(--shadows-A500);
+    }
+  }
+
+  &--primary {
+    color: var(--primary-A200);
+
+    &:hover {
+      color: var(--primary-A400);
+    }
+  }
+}
