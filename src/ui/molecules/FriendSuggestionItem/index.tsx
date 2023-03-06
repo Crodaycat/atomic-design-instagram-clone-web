@@ -24,8 +24,8 @@ export const FriendSuggestionItem: FC<FriendSuggestionItemProps> = ({
   actionButtonText,
   handleClick,
 }) => (
-  <article>
-    <div>
+  <article className='friend-suggestion'>
+    <div className='friend-suggestion__avatar'>
       <Link to={`/profile/${userId}`}>
         <Avatar
           src={imageUrl}
@@ -35,14 +35,14 @@ export const FriendSuggestionItem: FC<FriendSuggestionItemProps> = ({
       </Link>
     </div>
 
-    <div>
+    <div className='friend-suggestion__summary'>
       <Link to={`/profile/${userId}`}>
         <Title size={12}>{userName}</Title>
       </Link>
       <SubTitle size={12}>{suggestionText}</SubTitle>
     </div>
 
-    <div>
+    <div className='friend-suggestion__action'>
       <Button color={COLORS.PRIMARY} onClick={handleClick}>
         {actionButtonText}
       </Button>
