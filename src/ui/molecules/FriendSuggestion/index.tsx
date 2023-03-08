@@ -7,16 +7,16 @@ import { Title } from '../../atoms/title';
 import { COLORS } from '../../model/colors';
 import './index.scss';
 
-interface FriendSuggestionItemProps {
+interface FriendSuggestionProps {
   userId: string;
   imageUrl?: string;
   userName: string;
   suggestionText: string;
   actionButtonText: string;
-  handleClick: () => void;
+  handleClick: (userId: string) => void;
 }
 
-export const FriendSuggestionItem: FC<FriendSuggestionItemProps> = ({
+export const FriendSuggestion: FC<FriendSuggestionProps> = ({
   userId,
   imageUrl,
   userName,
@@ -43,7 +43,7 @@ export const FriendSuggestionItem: FC<FriendSuggestionItemProps> = ({
     </div>
 
     <div className='friend-suggestion__action'>
-      <Button color={COLORS.PRIMARY} onClick={handleClick}>
+      <Button color={COLORS.PRIMARY} onClick={() => handleClick(userId)}>
         {actionButtonText}
       </Button>
     </div>

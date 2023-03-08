@@ -1,48 +1,19 @@
 import './App.css';
-import { FriendSuggestionItem } from './ui/molecules/FriendSuggestionItem';
+import { suggestionsList } from './constants/suggestions';
+import { FriendSuggestions } from './ui/organisms/FriendSuggestions';
 
 function App() {
   return (
     <div className='App'>
-      <FriendSuggestionItem
-        userId='123'
-        userName='Carolina'
-        suggestionText='Sugerencias para ti'
-        imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg'
-        actionButtonText='Seguir'
-        handleClick={() => console.log('Le dio click al botón de acción')}
-      />
-      <FriendSuggestionItem
-        userId='123'
-        userName='Carolina'
-        suggestionText='Sugerencias para ti'
-        imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg'
-        actionButtonText='Seguir'
-        handleClick={() => console.log('Le dio click al botón de acción')}
-      />
-      <FriendSuggestionItem
-        userId='123'
-        userName='Carolina'
-        suggestionText='Sugerencias para ti'
-        imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg'
-        actionButtonText='Seguir'
-        handleClick={() => console.log('Le dio click al botón de acción')}
-      />
-      <FriendSuggestionItem
-        userId='123'
-        userName='Carolina'
-        suggestionText='Sugerencias para ti'
-        imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg'
-        actionButtonText='Seguir'
-        handleClick={() => console.log('Le dio click al botón de acción')}
-      />
-      <FriendSuggestionItem
-        userId='123'
-        userName='Carolina'
-        suggestionText='Sugerencias para ti'
-        imageUrl='https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg'
-        actionButtonText='Seguir'
-        handleClick={() => console.log('Le dio click al botón de acción')}
+      <FriendSuggestions
+        title='Sugerencias para ti'
+        actionText='Ver todo'
+        actionUrl='/#'
+        suggestions={suggestionsList}
+        suggestionActionText='Seguir'
+        onSuggestionClick={(userId: string) =>
+          console.log('Se hace click en seguir al usuario con id', userId)
+        }
       />
     </div>
   );
