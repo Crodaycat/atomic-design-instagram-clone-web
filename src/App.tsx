@@ -1,11 +1,16 @@
 import './App.css';
-import { suggestionsList } from './constants/suggestions';
-import { FriendSuggestions } from './ui/organisms/FriendSuggestions';
+import { myProfile, suggestionsList } from './constants/suggestions';
+import { ProfileAndSuggestions } from './ui/organisms/ProfilesAndSuggestions';
 
 function App() {
   return (
     <div className='App'>
-      <FriendSuggestions
+      <ProfileAndSuggestions
+        profile={myProfile}
+        profileActionText='Cambiar'
+        profileHandleClick={(userId: string) =>
+          console.log('Se hace click en el usuario principal', userId)
+        }
         title='Sugerencias para ti'
         actionText='Ver todo'
         actionUrl='/#'

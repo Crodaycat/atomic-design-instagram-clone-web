@@ -14,6 +14,8 @@ interface FriendSuggestionProps {
   suggestionText: string;
   actionButtonText: string;
   handleClick: (userId: string) => void;
+  avatarSize?: number;
+  suggestionTextSize?: number;
 }
 
 export const FriendSuggestion: FC<FriendSuggestionProps> = ({
@@ -23,6 +25,8 @@ export const FriendSuggestion: FC<FriendSuggestionProps> = ({
   suggestionText,
   actionButtonText,
   handleClick,
+  avatarSize = 32,
+  suggestionTextSize = 12,
 }) => (
   <article className='friend-suggestion'>
     <div className='friend-suggestion__avatar'>
@@ -30,7 +34,7 @@ export const FriendSuggestion: FC<FriendSuggestionProps> = ({
         <Avatar
           src={imageUrl}
           alt={`Imagen de perfil del usuario ${userName}`}
-          size={32}
+          size={avatarSize}
         />
       </Link>
     </div>
@@ -39,7 +43,7 @@ export const FriendSuggestion: FC<FriendSuggestionProps> = ({
       <Link to={`/profile/${userId}`}>
         <Title size={12}>{userName}</Title>
       </Link>
-      <SubTitle size={12}>{suggestionText}</SubTitle>
+      <SubTitle size={suggestionTextSize}>{suggestionText}</SubTitle>
     </div>
 
     <div className='friend-suggestion__action'>

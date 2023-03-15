@@ -3,8 +3,9 @@ import { Link } from '../../atoms/link';
 import { SubTitle } from '../../atoms/sub-title';
 import { Suggestion } from '../../model/seggetion';
 import { FriendSuggestion } from '../../molecules/FriendSuggestion';
+import './index.scss';
 
-interface FriendSuggestionsProps {
+export interface FriendSuggestionsProps {
   title?: string;
   actionText?: string;
   actionUrl?: string;
@@ -21,9 +22,9 @@ export const FriendSuggestions: FC<FriendSuggestionsProps> = ({
   suggestionActionText = 'Seguir',
   onSuggestionClick = () => null,
 }) => (
-  <section>
-    <header>
-      <SubTitle>{title}</SubTitle>
+  <section className='friends-suggetions'>
+    <header className='friends-suggetions__header'>
+      <SubTitle size={14}>{title}</SubTitle>
 
       <Link to={actionUrl}>{actionText}</Link>
     </header>
