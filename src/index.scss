@@ -1,5 +1,6 @@
 :root {
   // shadows
+  --shadows-200: rgb(147, 147, 147);
   --shadows-A200: rgb(38, 38, 38);
   --shadows-A500: rgb(142, 142, 142);
   --shadows-A600: rgb(147, 147, 147);
@@ -18,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
 }
 
 code {
